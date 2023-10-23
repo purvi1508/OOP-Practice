@@ -19,9 +19,12 @@ public:
 };
 class Complex {
     int a, b;
-    // Friend declaration for the Calculator class's realcomplex and imagcomplex functions
+    //Friend declaration for the Calculator class's realcomplex and imagcomplex functions
+    //Individually declaring functions as friend
     friend int Calculator::realcomplex(Complex O1, Complex O2);
     friend int Calculator::imagcomplex(Complex O1, Complex O2);
+    //Declaring a entire class as friend
+    //friend class Calculator
 
 public:
     void setNumber(int n1, int n2) {
