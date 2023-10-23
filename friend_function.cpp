@@ -3,7 +3,6 @@ using namespace std;
 
 class Complex{
     int a, b;
-    friend Complex sumComplex(Complex o1, Complex o2); // Friend function declaration
 
 public:
     void setNumber(int n1, int n2){
