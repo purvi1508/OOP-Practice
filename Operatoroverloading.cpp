@@ -12,14 +12,29 @@ class complexnumber{
         real=r;
         imaginary=i;
     }
-    void print(){
-        cout<<real<<"+"<<imaginary<<"i"<<endl;
-    }
-    complexnumber operator+(complexnumber c1){
+    complexnumber operator + (complexnumber c1){
         complexnumber temp;
         temp.real=real+c1.real;
         temp.imaginary=imaginary+c1.imaginary;
         return temp;
+    }
+    complexnumber operator - (complexnumber c1){
+        complexnumber temp;
+        temp.real=real-c1.real;
+        temp.imaginary=imaginary-c1.imaginary;
+        return temp;
+    }
+    friend ostream& operator << (ostream& out, const complexnumber& c1) {
+        out << c1.real << "+" << c1.imaginary << "i";
+        return out;
+    }
+
+    friend istream& operator >> (istream& in, complexnumber& c1) {
+        cout << "real: ";
+        in >> c1.real;
+        cout << "imaginary: ";
+        in >> c1.imaginary;
+        return in;
     }
 };
 int main(){
@@ -27,5 +42,5 @@ int main(){
     complexnumber c2(8,9);
     complexnumber c3;
     c3=c2+c1;
-    c3.print();
+    cout<<c3;
 }
