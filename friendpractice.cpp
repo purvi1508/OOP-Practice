@@ -1,6 +1,3 @@
-#include<iostream>
-#include<cmath>
-using namespace std;
 //Design a class representing a 2D point.
 //Define friend functions to calculate the distance between two points (using distance formula) 
 //and the midpoint of two points.
